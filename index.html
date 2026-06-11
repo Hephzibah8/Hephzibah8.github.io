@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hephzibah Ohene</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garant:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--green:#0D2B1F;--gold:#C9943A;--gold-light:#E8B96A;--cream:#F5F0E8;--charcoal:#1C1C1C;--sage:#4A6B58;--mid:#2A4034}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--charcoal)}
+nav{background:var(--green);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100}
+.nav-logo{font-family:'Cormorant Garant',serif;font-size:18px;font-weight:600;color:var(--cream);letter-spacing:0.04em;text-decoration:none}
+.nav-links{display:flex;gap:1.5rem}
+.nav-links a{font-size:12px;font-weight:500;color:rgba(245,240,232,0.6);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;cursor:pointer}
+.nav-links a:hover{color:var(--gold-light)}
+
+/* HERO */
+.hero{background:var(--green);padding:5rem 2rem 4rem;position:relative;overflow:hidden}
+.kente-bg{position:absolute;inset:0;opacity:0.06;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 2px,transparent 0,transparent 50%),repeating-linear-gradient(-45deg,var(--gold) 0,var(--gold) 2px,transparent 0,transparent 50%);background-size:20px 20px}
+.hero-inner{position:relative;z-index:1;max-width:860px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center}
+.hero-text{min-width:0}
+.hero-eyebrow{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+.hero-headline{font-family:'Cormorant Garant',serif;font-size:clamp(42px,6.5vw,76px);font-weight:700;font-style:italic;line-height:1.05;color:var(--cream);margin-bottom:1.5rem}
+.hero-headline span{color:var(--gold)}
+.hero-sub{font-size:15px;font-weight:300;color:rgba(245,240,232,0.75);max-width:460px;line-height:1.85;margin-bottom:2rem}
+.hero-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:2.5rem}
+.tag{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--gold-light);border:0.5px solid rgba(201,148,58,0.4);padding:5px 12px;border-radius:2px}
+.hero-cta{display:inline-block;background:var(--gold);color:var(--green);font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:13px 32px;border-radius:2px;text-decoration:none;transition:opacity 0.2s}
+.hero-cta:hover{opacity:0.88}
+
+/* PHOTO PLACEHOLDER */
+.hero-photo{width:200px;height:240px;flex-shrink:0;border:2px dashed rgba(201,148,58,0.35);border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;cursor:pointer;transition:border-color 0.2s;background:rgba(201,148,58,0.04)}
+.hero-photo:hover{border-color:rgba(201,148,58,0.6)}
+.hero-photo i{font-size:32px;color:rgba(201,148,58,0.4)}
+.hero-photo-label{font-size:11px;color:rgba(245,240,232,0.3);letter-spacing:0.06em;text-align:center;line-height:1.5}
+
+/* SECTIONS */
+.section-wrap{padding:4rem 2rem}
+.section{max-width:860px;margin:0 auto}
+.section-label{font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem}
+.section-title{font-family:'Cormorant Garant',serif;font-size:40px;font-weight:700;color:var(--green);line-height:1.15;margin-bottom:1.5rem}
+.divider{width:40px;height:3px;background:var(--gold);margin-bottom:1.75rem}
+.about-text{font-size:15px;line-height:1.85;color:#2A2A2A;margin-bottom:1.25rem}
+.about-pull{font-family:'Cormorant Garant',serif;font-size:24px;font-style:italic;color:var(--green);border-left:3px solid var(--gold);padding-left:1.25rem;margin:2rem 0;line-height:1.5}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.75rem}
+.about-stat{background:var(--green);padding:1.75rem;border-radius:2px}
+.about-stat-num{font-family:'Cormorant Garant',serif;font-size:44px;font-weight:700;color:var(--gold);line-height:1}
+.about-stat-label{font-size:12px;font-weight:400;color:rgba(245,240,232,0.6);margin-top:0.5rem;line-height:1.6}
+
+/* VENTURES */
+.ventures-wrap{background:var(--green);padding:4rem 2rem}
+.ventures-inner{max-width:860px;margin:0 auto}
+.ventures-inner .section-title{color:var(--cream)}
+.ventures-inner .section-label{color:var(--gold)}
+.ventures-intro{font-size:14px;color:rgba(245,240,232,0.6);line-height:1.75;max-width:480px;margin-bottom:1.75rem}
+.ventures-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,148,58,0.15)}
+.venture-card{background:var(--mid);padding:1.75rem;transition:background 0.2s;position:relative}
+.venture-card:hover{background:#1e3829}
+.venture-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem;gap:8px}
+.venture-type{font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold)}
+.badge{font-size:9px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.badge-upcoming{background:rgba(201,148,58,0.12);color:rgba(232,185,106,0.7);border:0.5px solid rgba(201,148,58,0.25)}
+
+.venture-name{font-family:'Cormorant Garant',serif;font-size:22px;font-weight:600;color:var(--cream);margin-bottom:0.6rem}
+.venture-desc{font-size:13px;color:rgba(245,240,232,0.5);line-height:1.7}
+
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.service-card{border:0.5px solid rgba(13,43,31,0.15);padding:1.75rem;border-radius:2px;border-left:3px solid var(--gold)}
+.service-icon{font-size:22px;color:var(--gold);margin-bottom:0.75rem}
+.service-title{font-family:'Cormorant Garant',serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:0.5rem}
+.service-desc{font-size:13px;color:#555;line-height:1.7}
+
+/* CONTACT */
+.contact-wrap{background:var(--charcoal);padding:4rem 2rem}
+.contact-inner{max-width:860px;margin:0 auto}
+.contact-inner .section-title{color:var(--cream)}
+.contact-inner .section-label{color:var(--gold)}
+.contact-desc{font-size:15px;color:rgba(245,240,232,0.62);line-height:1.85;margin-bottom:2rem;max-width:440px}
+.contact-items{display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem}
+.contact-row{display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(245,240,232,0.75)}
+.contact-row i{color:var(--gold);font-size:20px}
+.contact-form{display:flex;flex-direction:column;gap:1rem;max-width:480px}
+.contact-form input,.contact-form textarea{background:rgba(255,255,255,0.06);border:0.5px solid rgba(245,240,232,0.2);color:var(--cream);font-family:'Inter',sans-serif;font-size:14px;padding:12px 16px;border-radius:2px;outline:none;transition:border-color 0.2s}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:rgba(245,240,232,0.3)}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold)}
+.contact-form textarea{height:120px;resize:vertical}
+.contact-btn{background:var(--gold);color:var(--green);font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:13px 32px;border:none;border-radius:2px;cursor:pointer;align-self:flex-start;transition:opacity 0.2s}
+.contact-btn:hover{opacity:0.88}
+
+/* FOOTER */
+footer{background:var(--green);padding:1.75rem 2rem}
+.footer-inner{max-width:860px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-name{font-family:'Cormorant Garant',serif;font-size:15px;color:rgba(245,240,232,0.5)}
+.footer-copy{font-size:11px;color:rgba(245,240,232,0.35)}
+
+@media(max-width:640px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-photo{display:none}
+  .about-grid,.ventures-grid,.services-grid{grid-template-columns:1fr}
+  .nav-links{gap:1rem}
+  .nav-links a{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">H. Ohene</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#ventures">Ventures</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="kente-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Hephzibah Ohene &middot; Accra, Ghana</div>
+      <h1 class="hero-headline">Africa&rsquo;s future<br>is being <span>built now.</span></h1>
+      <p class="hero-sub">I work at the frontier where infrastructure, sustainability, and capital converge &mdash; creating ventures, opening doors, and shaping the systems that will define the next generation of African growth.</p>
+      <div class="hero-tags">
+        <span class="tag">Government Relations</span>
+        <span class="tag">ESG &amp; Sustainability</span>
+        <span class="tag">Infrastructure</span>
+        <span class="tag">Venture Building</span>
+      </div>
+      <a class="hero-cta" href="#contact">Start a conversation</a>
+    </div>
+    <div class="hero-photo" title="Add your professional headshot here">
+      <i class="ti ti-user" aria-hidden="true"></i>
+      <div class="hero-photo-label">Professional<br>headshot</div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-wrap">
+    <div class="section">
+      <div class="section-label">About</div>
+      <h2 class="section-title">I don&rsquo;t wait for<br>the world to change.</h2>
+      <div class="divider"></div>
+      <p class="about-text">I&rsquo;m Hephzibah Ohene &mdash; a strategist, founder, and builder working across infrastructure, sustainability, and government in Ghana and West Africa. As Head of Government Relations &amp; Special Projects at VAOB Infrastructure Group, I navigate the spaces where policy, capital, and delivery meet, turning complex mandates into real outcomes.</p>
+      <p class="about-text">But my work doesn&rsquo;t stop at a job title. I build companies. I originate deals. I connect the people who have the resources with the people who have the vision &mdash; and I make sure something tangible comes out the other side.</p>
+      <div class="about-pull">&ldquo;My measure of success is simple: did something real get built?&rdquo;</div>
+      <p class="about-text">Trained in marketing strategy through the Chartered Institute of Marketing (UK), and currently deepening my expertise in sustainable development, I bring both commercial rigour and long-term thinking to everything I touch.</p>
+      <div class="about-grid">
+        <div class="about-stat">
+          <div class="about-stat-num">5+</div>
+          <div class="about-stat-label">Ventures across infrastructure,<br>sustainability, minerals &amp; waste</div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-num">CIM</div>
+          <div class="about-stat-label">Chartered Institute of Marketing<br>UK postgraduate qualification</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ventures">
+  <div class="ventures-wrap">
+    <div class="ventures-inner">
+      <div class="section-label">Portfolio</div>
+      <h2 class="section-title">Ventures &amp;<br>Initiatives</h2>
+      <p class="ventures-intro">A growing portfolio of ventures built around sectors Ghana &mdash; and Africa &mdash; cannot afford to ignore. Each one designed for the long term.</p>
+      <div class="ventures-grid">
+
+        <div class="venture-card">
+          <div class="venture-top">
+            <div class="venture-type">ESG &middot; Holding</div>
+            <span class="badge badge-upcoming">Upcoming</span>
+          </div>
+          <div class="venture-name">Anew Arc Ltd</div>
+          <div class="venture-desc">The holding company behind it all. ESG advisory, sustainability governance, carbon credit financing, and water technology &mdash; built for the organisations shaping Africa&rsquo;s responsible growth story.</div>
+        </div>
+
+        <div class="venture-card">
+          <div class="venture-top">
+            <div class="venture-type">Urban Greening</div>
+            <span class="badge badge-upcoming">Upcoming</span>
+          </div>
+          <div class="venture-name">Urban Eden Ltd</div>
+          <div class="venture-desc">Cities need to breathe. Urban Eden delivers land reclamation, phytoremediation, urban tree planting, and carbon credit generation &mdash; starting in Accra, scaling across the continent.</div>
+        </div>
+
+        <div class="venture-card">
+          <div class="venture-top">
+            <div class="venture-type">Minerals &middot; Trading</div>
+          </div>
+          <div class="venture-name">DENS Precious Minerals</div>
+          <div class="venture-desc">Gold trading, mining consulting, and brokerage &mdash; connecting Ghana&rsquo;s mineral wealth to global markets with integrity and expertise.</div>
+        </div>
+
+        <div class="venture-card">
+          <div class="venture-top">
+            <div class="venture-type">Waste Management</div>
+            <span class="badge badge-upcoming">Upcoming</span>
+          </div>
+          <div class="venture-name">Borla King</div>
+          <div class="venture-desc">Waste is a resource waiting to be unlocked. Borla King is building the circular waste infrastructure Accra needs &mdash; launching 2026.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-wrap">
+    <div class="section">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Where I can<br>move the needle.</h2>
+      <div class="divider"></div>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="ti ti-building-bank service-icon" aria-hidden="true"></i>
+          <div class="service-title">Government Relations</div>
+          <div class="service-desc">I open institutional doors that others find closed &mdash; translating your ambitions into proposals, engagements, and outcomes with Ghana&rsquo;s public sector.</div>
+        </div>
+        <div class="service-card">
+          <i class="ti ti-leaf service-icon" aria-hidden="true"></i>
+          <div class="service-title">ESG Advisory</div>
+          <div class="service-desc">Sustainability isn&rsquo;t a checkbox. I help organisations build credible ESG strategies, governance frameworks, and carbon credit structures that hold up.</div>
+        </div>
+        <div class="service-card">
+          <i class="ti ti-route service-icon" aria-hidden="true"></i>
+          <div class="service-title">Infrastructure Facilitation</div>
+          <div class="service-desc">From deal origination to stakeholder alignment, I help move large infrastructure and logistics projects from concept to commitment.</div>
+        </div>
+        <div class="service-card">
+          <i class="ti ti-briefcase service-icon" aria-hidden="true"></i>
+          <div class="service-title">Commercial Strategy</div>
+          <div class="service-desc">Whether it&rsquo;s a PPP structure, a new market entry, or a partnership you need to get right &mdash; I bring the strategic clarity to make it work.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-inner">
+      <div class="section-label">Get in Touch</div>
+      <h2 class="section-title">If you&rsquo;re building<br>something that matters &mdash;</h2>
+      <p class="contact-desc">I want to hear about it. Whether you&rsquo;re an investor, a government body, a developer, or a founder with a bold idea &mdash; let&rsquo;s find out if we&rsquo;re aligned.</p>
+      <div class="contact-items">
+        <div class="contact-row"><i class="ti ti-map-pin" aria-hidden="true"></i>Accra, Ghana</div>
+        <div class="contact-row"><i class="ti ti-world" aria-hidden="true"></i>Operating across Ghana and West Africa</div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Tell me about your project or idea..."></textarea>
+        <button type="submit" class="contact-btn">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-name">Hephzibah Ohene</div>
+    <div class="footer-copy">&copy; 2026 &middot; All rights reserved</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const id = a.getAttribute('href');
+    if(id === '#') return;
+    const target = document.querySelector(id);
+    if(target) target.scrollIntoView({behavior:'smooth'});
+  });
+});
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'Message sent \u2713';
+  btn.style.background = '#4A6B58';
+  btn.style.color = '#F5F0E8';
+  setTimeout(() => {
+    btn.textContent = 'Send message';
+    btn.style.background = '';
+    btn.style.color = '';
+  }, 3000);
+}
+</script>
+</body>
+</html>
